@@ -1057,10 +1057,7 @@ StartupRoutine(){
     CheckConnectivity "$1"
     echo -e "Starting PADD..."
 
-    # Get PID of PADD
-    pid=$$
     echo -ne " [■·········]  10%\\r"
-    echo ${pid} > ./PADD.pid
 
     # Check for updates
     echo -ne " [■■········]  20%\\r"
@@ -1092,10 +1089,6 @@ StartupRoutine(){
     CheckConnectivity "$1"
 
     echo "Starting PADD."
-    # Get PID of PADD
-    pid=$$
-    echo "- Writing PID (${pid}) to file."
-    echo ${pid} > ./PADD.pid
 
     # Check for updates
     echo "- Checking for version file."
@@ -1131,11 +1124,6 @@ StartupRoutine(){
 
     echo -e "- Checking internet connection..."
     CheckConnectivity "$1"
-
-    # Get PID of PADD
-    pid=$$
-    echo "- Writing PID (${pid}) to file..."
-    echo ${pid} > ./PADD.pid
 
     # Check for updates
     echo "- Checking for PADD version file..."
